@@ -1,5 +1,5 @@
-#turn json into csv
-# calculate difference between global and local runtime
+# This script takes the JSON file from scraping_tencent_video_movie_info.py, cleans it, and exports it into a CSV file.
+
 import json
 import re
 import csv
@@ -16,7 +16,7 @@ with open("tencent_video.csv","a", newline='') as csv_file:
 
 	for row in range(0, len(data)):
 
-		#convert runtime
+		#convert runtime from HH:MM:SS to minutes
 		if ((data[row]["china_runtime"] != None) and (len(data[row]["china_runtime"])> 0)): #if not an empty string
 			convert_list = re.split(":", data[row]["china_runtime"])
 			for x in range(0,len(convert_list)):

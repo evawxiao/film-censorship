@@ -1,3 +1,8 @@
+# This script scrapes all US videos off Tencent Video.
+
+# To run this Scrapy spider, make sure you have Scrapy installed (https://docs.scrapy.org/en/latest/).
+# Run command: scrapy crawl tencentvideo -o tencent_video.json
+
 import scrapy
 import re
 import csv
